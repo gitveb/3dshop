@@ -1,0 +1,86 @@
+*
+	box-sizing: border-box
+
+body
+	font-family: 'Roboto', sans-serif
+	font-weight: 400
+	font-style: normal
+	font-size: 13px
+	line-height: 18px
+
+.header
+	max-width: 1440px
+	width: 100%
+	margin: auto
+	box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.16)
+
+.container
+	max-width: 1228px
+	width: 100%
+	margin: 0 auto
+
+h1, h2, h3, p
+	margin: 0
+
+a
+	text-decoration: none
+	color: #000
+	line-height: 18px
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+input
+	border: none
+	outline: none
+	line-height: 18px
+i
+	color: #F60007
+button
+	line-height: 18px
+
+.menu-btn
+	display: none
+	align-items: center
+	flex-direction: column
+	justify-content: space-between
+	max-width: 24px
+	width: 100%
+	height: 4px
+	margin: 0 6px
+	background-color: #F60007
+	border: none
+	cursor: pointer
+	&:before
+		content: ''
+		width: 24px
+		height: 4px
+		display: block
+		position: absolute
+		background-color: #F60007
+		transition: transform 0.2s
+		margin-top: 8px
+	&:after
+		content: ''
+		width: 24px
+		height: 4px
+		display: block
+		position: absolute
+		background-color: #F60007
+		transition: transform 0.2s
+		margin-top: -8px
+
+@media	( max-width: 880px	)
+	.container
+		max-width: 768px
+		width: 100%
+	.menu-btn
+		display: flex
+		&-active
+			height: 0
+			&:before
+				transform: rotate(45deg)
+				margin-top: 0
+			&:after
+				transform: rotate(-45deg)
+				margin-top: 0
